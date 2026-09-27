@@ -1,9 +1,7 @@
-import { useContext, useEffect, useRef, useState } from "react"
+import { useContext, useRef, useState } from "react"
 import { Head } from "./home"
-import { str } from "./helper"
 import { flipCard, animateCashPayment, animatePaymentSuccess } from "./animation"
 import { Context } from "./App"
-import { Items } from "./order"
 import * as fun from 'lodash'
 export const Pay = function () {
     return (
