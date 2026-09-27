@@ -2770,3 +2770,47 @@
 .payment-summary__pay-btn:hover .payment-summary__pay-btn-icon {
   transform: translateX(4px);
 }
+/* Responsive refinements for all pages and checkout components. */
+@media (max-width: 768px) {
+  .home, .menu, .pay, .order, .content, .lineup, .points, .story, .footer, .search, .category, .juices, .about-us, .rights, .order-items, .order-subtotal, .pay__container { width: 100%; min-width: 0; }
+  .head { max-width: 100%; }
+  .points, .story { grid-template-columns: minmax(0, 1fr); }
+  .points__details, .points__balance, .story__content, .story__media, .order-item__details, .order-item__total, .payment-method-card__info, .saved-card__main, .saved-card__details, .payment-summary__item-info { min-width: 0; }
+  .search { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) auto; }
+  .juices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .order-item { grid-template-columns: 88px minmax(0, 1fr); }
+  .pay__container { max-width: 620px; }
+}
+@media (max-width: 600px) {
+  .head { width: 100%; }
+  .search { display: grid; grid-template-columns: minmax(0, 1fr) auto; }
+  .search__brand { grid-column: 1 / -1; }
+  .search__field { width: 100%; }
+  .search__cart { position: static; justify-self: end; min-height: 46px; padding-inline: 14px; }
+  .juices { grid-template-columns: minmax(0, 1fr); }
+  .juice-card__footer { align-items: center; flex-wrap: wrap; }
+  .juice-card__button { min-height: 44px; }
+  .order-item { grid-template-columns: 64px minmax(0, 1fr); padding: 12px; }
+  .order-item__image { width: 64px; height: 64px; }
+  .order-item__total { grid-column: 2; }
+  .order-items__actions { width: 100%; flex-wrap: wrap; }
+  .payment-method-card, .saved-card { align-items: flex-start; flex-wrap: wrap; padding: 14px; }
+  .payment-method-card__info, .saved-card__main { flex: 1 1 100%; }
+  .payment-method-card__badge, .saved-card__status { margin-left: 58px; }
+  .saved-card__header-line, .saved-card__meta, .payment-summary__meta { flex-wrap: wrap; overflow-wrap: anywhere; }
+  .new-card__row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+  .new-card__preview { min-height: 190px; }
+  .new-card__side--front { padding: 16px; }
+  .new-card__preview-number { font-size: clamp(0.78rem, 4vw, 1rem); letter-spacing: 0.12em; overflow-wrap: anywhere; }
+  .new-card__back-footer { align-items: flex-start; flex-direction: column; }
+  .new-card__back-disclaimer { font-size: 0.52rem; }
+  .payment-summary__item, .payment-summary__total-line { min-width: 0; padding: 12px; }
+  .payment-summary__item-total { min-width: 0; }
+}
+@media (max-width: 360px) {
+  .head { gap: 8px; padding-inline: 10px; }
+  .head__link { padding-inline: 8px; font-size: 0.64rem; }
+  .new-card__row { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .new-card__side--front { padding: 12px; }
+  .payment-method-card__badge, .saved-card__status { margin-left: 0; }
+}
