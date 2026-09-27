@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Mango Juice",
+    "category": "Fruit Juice",
+    "price": 450,
+    "size": "Medium",
+    "ingredients": ["Mango", "Water", "Sugar"],
+    "image": "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Pineapple Juice",
+    "category": "Fruit Juice",
+    "price": 400,
+    "size": "Medium",
+    "ingredients": ["Pineapple", "Water", "Sugar"],
+    "image": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "Watermelon Juice",
+    "category": "Fruit Juice",
+    "price": 350,
+    "size": "Medium",
+    "ingredients": ["Watermelon", "Ice", "Sugar"],
+    "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Papaya Juice",
+    "category": "Fruit Juice",
+    "price": 380,
+    "size": "Medium",
+    "ingredients": ["Papaya", "Milk", "Sugar"],
+    "image": "https://images.unsplash.com/photo-1628557044797-f21a177c37ec?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 5,
+    "name": "Passion Fruit Juice",
+    "category": "Fruit Juice",
+    "price": 500,
+    "size": "Medium",
+    "ingredients": ["Passion Fruit", "Water", "Sugar"],
+    "image": "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 6,
+    "name": "Orange Juice",
+    "category": "Citrus Juice",
+    "price": 450,
+    "size": "Medium",
+    "ingredients": ["Orange"],
+    "image": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 7,
+    "name": "Lime Juice",
+    "category": "Citrus Juice",
+    "price": 300,
+    "size": "Medium",
+    "ingredients": ["Lime", "Water", "Sugar", "Salt"],
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 8,
+    "name": "Lemon Mint",
+    "category": "Cooler",
+    "price": 350,
+    "size": "Medium",
+    "ingredients": ["Lemon", "Mint", "Water", "Sugar", "Ice"],
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 9,
+    "name": "Apple Juice",
+    "category": "Fruit Juice",
+    "price": 500,
+    "size": "Medium",
+    "ingredients": ["Apple", "Water", "Sugar"],
+    "image": "https://images.unsplash.com/photo-1576186726115-4d51596775d1?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 10,
+    "name": "Guava Juice",
+    "category": "Fruit Juice",
+    "price": 400,
+    "size": "Medium",
+    "ingredients": ["Guava", "Water", "Sugar"],
+    "image": "https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 11,
+    "name": "Avocado Shake",
+    "category": "Milkshake",
+    "price": 550,
+    "size": "Large",
+    "ingredients": ["Avocado", "Milk", "Sugar", "Ice Cream"],
+    "image": "https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 12,
+    "name": "Banana Shake",
+    "category": "Milkshake",
+    "price": 500,
+    "size": "Large",
+    "ingredients": ["Banana", "Milk", "Sugar", "Ice Cream"],
+    "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 13,
+    "name": "Strawberry Milkshake",
+    "category": "Milkshake",
+    "price": 600,
+    "size": "Large",
+    "ingredients": ["Strawberry", "Milk", "Sugar", "Ice Cream"],
+    "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 14,
+    "name": "Chocolate Milkshake",
+    "category": "Milkshake",
+    "price": 650,
+    "size": "Large",
+    "ingredients": ["Chocolate", "Milk", "Ice Cream", "Sugar"],
+    "image": "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 15,
+    "name": "Mixed Fruit Juice",
+    "category": "Special",
+    "price": 600,
+    "size": "Large",
+    "ingredients": ["Mango", "Pineapple", "Papaya", "Banana", "Apple"],
+    "image": "https://images.unsplash.com/photo-1506802913710-40e2e66339c9?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 16,
+    "name": "Carrot Orange Juice",
+    "category": "Healthy Juice",
+    "price": 500,
+    "size": "Medium",
+    "ingredients": ["Carrot", "Orange", "Ginger"],
+    "image": "https://images.unsplash.com/photo-1622597467836-f3285f2131b7?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 17,
+    "name": "Beetroot Juice",
+    "category": "Healthy Juice",
+    "price": 450,
+    "size": "Medium",
+    "ingredients": ["Beetroot", "Apple", "Lemon"],
+    "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 18,
+    "name": "Ginger Lemon Juice",
+    "category": "Healthy Juice",
+    "price": 350,
+    "size": "Medium",
+    "ingredients": ["Lemon", "Ginger", "Honey", "Water"],
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 19,
+    "name": "Mango Passion Smoothie",
+    "category": "Smoothie",
+    "price": 650,
+    "size": "Large",
+    "ingredients": ["Mango", "Passion Fruit", "Yogurt", "Honey"],
+    "image": "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  },
+  {
+    "id": 20,
+    "name": "Tropical Paradise",
+    "category": "Special",
+    "price": 700,
+    "size": "Large",
+    "ingredients": ["Mango", "Pineapple", "Passion Fruit", "Orange", "Ice"],
+    "image": "https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=640&q=80",
+    "available": true
+  }
+]
