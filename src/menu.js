@@ -2,8 +2,8 @@
 
 import { useContext, useEffect, useRef } from "react"
 import { Context } from "./App"
-import { Head, Home } from "./home"
-import { animateJuices, animateAddToCart, particleBurst, animateFallToCart } from "./animation"
+import { Head} from "./home"
+import { animateJuices,  particleBurst, animateFallToCart } from "./animation"
 
 export const Menu = function () {
     return (
@@ -70,7 +70,6 @@ const Juices=function(){
         const onCartClick=(e)=>{
             const btn=e.target.closest('.juice-card__button')
             if(btn){
-                // animateAddToCart(btn)
                 particleBurst(btn)          // particle burst – no logic touched
                 animateFallToCart(btn)      // Anime.js fall into cart – no logic touched
             }
