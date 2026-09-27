@@ -2814,3 +2814,37 @@
   .new-card__side--front { padding: 12px; }
   .payment-method-card__badge, .saved-card__status { margin-left: 0; }
 }
+
+/* Keep the entire checkout column within phone viewport widths. */
+@media (max-width: 768px) {
+  .pay { padding: 16px; overflow-x: clip; }
+  .pay__container, .payment-methods, .new-card, .payment-summary { width: 100%; max-width: 100%; min-width: 0; }
+  .pay__container { margin: 20px auto 40px; gap: 16px; }
+  .payment-methods, .new-card, .payment-summary { padding: 20px 16px; border-radius: 20px; }
+  .payment-method-card, .saved-card, .payment-summary__item { min-width: 0; }
+  .payment-method-card__info, .saved-card__main, .saved-card__details { min-width: 0; }
+  .new-card__preview-wrapper { width: 100%; max-width: 380px; }
+  .new-card__form, .new-card__field, .new-card__input, .new-card__btn { width: 100%; min-width: 0; }
+  .payment-summary__item-info { overflow-wrap: anywhere; }
+  .payment-summary__total-line { flex-wrap: wrap; }
+}
+@media (max-width: 600px) {
+  .pay { padding: 12px; }
+  .pay__container { gap: 14px; margin: 16px auto 32px; }
+  .payment-methods, .new-card, .payment-summary { padding: 18px 14px; border-radius: 18px; }
+  .payment-method-card, .saved-card { gap: 10px; padding: 12px; }
+  .payment-method-card__info, .saved-card__main { flex: 1 1 100%; }
+  .payment-method-card__badge, .saved-card__status { margin-left: 0; }
+  .saved-card__header-line, .saved-card__meta { flex-wrap: wrap; gap: 5px; }
+  .new-card__row { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .new-card__preview-wrapper { margin-bottom: 22px; }
+  .new-card__preview { min-height: 176px; }
+  .new-card__side--front { padding: 14px; }
+  .new-card__preview-number { font-size: clamp(0.72rem, 3.8vw, 0.95rem); letter-spacing: 0.08em; overflow-wrap: anywhere; }
+  .new-card__preview-label { font-size: 0.48rem; }
+  .new-card__preview-val { font-size: 0.68rem; overflow-wrap: anywhere; }
+  .new-card__back-body { padding-inline: 14px; }
+  .payment-summary__item { align-items: flex-start; }
+  .payment-summary__item-info, .payment-summary__item-total { flex: 1 1 100%; }
+  .payment-summary__total-line { align-items: flex-start; gap: 8px; }
+}
