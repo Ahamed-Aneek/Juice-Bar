@@ -231,6 +231,14 @@ const Summary = function () {
 
     const handlePay = (e) => {
         if(!vals.currCard) return
+        const obj={
+            num:vals.history.length+1,
+            odrDate:new Date().toDateString(),
+            item:item.map(e=>e.name),
+            total:item.map((e,i)=>e.price*count[i]).reduce((acc,curr)=>acc+curr),
+            count
+        }
+        vals.setHistory(prev=>[...prev,obj])
         const btn = e.currentTarget
         const currentTotal = total
         animateCashPayment(btn, {

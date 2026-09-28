@@ -6,6 +6,7 @@ import { Menu } from "./menu"
 import { Order } from "./order"
 import { animateHead } from "./animation"
 import { Pay } from "./payment"
+import { History } from "./history"
 export const Home=function(){
     return <div className="home">
 <Head></Head>
@@ -18,7 +19,7 @@ export const Home=function(){
 }
  export const Head=function(){
     const vals=useContext(Context)
-    const arr=['menu','order','payment','reward','our story']
+    const arr=['menu','order','payment','history','our story']
 
     // 3-D entrance animation – no logic changes below this block
     const headRef=useRef(null)
@@ -29,6 +30,7 @@ export const Home=function(){
         e.target.textContent==='menu' &&vals.setPage(<Menu></Menu>)
         e.target.textContent==='order' && vals.setPage(<Order></Order>)
         e.target.textContent==='payment' && vals.setPage(<Pay></Pay>)
+        e.target.textContent==='history' &&vals.setPage(<History></History>)
     }
     return<div className="head" ref={headRef}>
       

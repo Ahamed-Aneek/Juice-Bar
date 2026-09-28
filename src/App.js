@@ -10,6 +10,7 @@ function App() {
   const[curr,setCurr]=useState('All')
   const[Payees,setPayees]=useState(JSON.parse(localStorage.getItem('payees'))||[])
   const[currCard,setCurrCard]=useState()
+  const[history,setHistory]=useState(JSON.parse(localStorage.getItem('history'))||[])
   useEffect(()=>{
     const getJuice=async function(){
       const res=await fetch('juice.json')
@@ -25,9 +26,12 @@ function App() {
   useEffect(()=>{
     localStorage.setItem('payees',JSON.stringify(Payees))
   },[Payees])
+    useEffect(()=>{
+    localStorage.setItem('history',JSON.stringify(history))
+  },[history])
   return (
     <div className="App">
-      <Context value={{page,setPage,juices,cart,setCart,setJuices,curr,setCurr,Payees,setPayees,currCard,setCurrCard}}>
+      <Context value={{page,setPage,juices,cart,setCart,setJuices,curr,setCurr,Payees,setPayees,currCard,setCurrCard,history,setHistory}}>
         {page}
       </Context>
     

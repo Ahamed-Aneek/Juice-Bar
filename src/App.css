@@ -2848,3 +2848,454 @@
   .payment-summary__item-info, .payment-summary__item-total { flex: 1 1 100%; }
   .payment-summary__total-line { align-items: flex-start; gap: 8px; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   PURCHASE HISTORY — HEADER COMPONENT STYLES
+   ═══════════════════════════════════════════════════════════════ */
+
+.history {
+  min-height: 100vh;
+  padding: 24px clamp(20px, 6vw, 88px) 80px;
+  background: #fffaf4;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-header {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin: 36px auto 28px;
+  padding: clamp(28px, 4.5vw, 44px) clamp(24px, 4vw, 48px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 248, 240, 0.88) 100%);
+  backdrop-filter: blur(20px) saturate(1.8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  border: 1px solid rgba(231, 111, 81, 0.18);
+  border-radius: 28px;
+  outline: 1px solid rgba(255, 255, 255, 0.6);
+  outline-offset: -1px;
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.9) inset,
+    0 16px 40px rgba(83, 42, 18, 0.08),
+    0 4px 12px rgba(83, 42, 18, 0.04);
+  overflow: hidden;
+  transition: box-shadow 280ms ease, border-color 280ms ease;
+}
+
+.history-header:hover {
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.95) inset,
+    0 20px 48px rgba(83, 42, 18, 0.11),
+    0 6px 16px rgba(83, 42, 18, 0.05);
+  border-color: rgba(231, 111, 81, 0.28);
+}
+
+.history-header__glow {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(231, 111, 81, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(30px);
+}
+
+.history-header__banner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.history-header__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  background: rgba(231, 111, 81, 0.09);
+  border: 1px solid rgba(231, 111, 81, 0.2);
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.history-header__badge-icon {
+  color: #e76f51;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.history-header__badge-text {
+  color: #c84e31;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.history-header__title {
+  margin: 0;
+  color: #2e1b13;
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.history-header__subtitle {
+  margin: 10px 0 0;
+  color: #6d5143;
+  font-size: clamp(0.88rem, 1.3vw, 1.05rem);
+  line-height: 1.6;
+  max-width: 580px;
+}
+
+.history-header__stats {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+  width: 100%;
+}
+
+.history-header__stat-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 24px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(231, 111, 81, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(83, 42, 18, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  user-select: none;
+}
+
+.history-header__stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(83, 42, 18, 0.09);
+  border-color: rgba(231, 111, 81, 0.3);
+}
+
+.history-header__icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  font-size: 1.55rem;
+  flex-shrink: 0;
+  transition: transform 220ms ease;
+}
+
+.history-header__stat-card:hover .history-header__icon-box {
+  transform: scale(1.08);
+}
+
+.history-header__stat-card--purchases .history-header__icon-box {
+  background: linear-gradient(135deg, #fff3e8 0%, #fde3cf 100%);
+  border: 1px solid rgba(231, 111, 81, 0.22);
+}
+
+.history-header__stat-card--spent .history-header__icon-box {
+  background: linear-gradient(135deg, #eef9f2 0%, #d4f2e0 100%);
+  border: 1px solid rgba(42, 157, 143, 0.22);
+}
+
+.history-header__stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.history-header__stat-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #7d6557;
+}
+
+.history-header__stat-value-group {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.history-header__stat-value {
+  font-size: clamp(1.5rem, 2.5vw, 1.95rem);
+  font-weight: 800;
+  color: #2e1b13;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.history-header__stat-currency {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #2a9d8f;
+  line-height: 1;
+}
+
+.history-header__stat-unit {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #8e7364;
+}
+
+.history-header__stat-subtext {
+  font-size: 0.72rem;
+  color: #a48879;
+  font-weight: 500;
+}
+
+/* Responsive queries */
+@media (max-width: 768px) {
+  .history {
+    padding: 16px clamp(12px, 4vw, 24px) 60px;
+  }
+
+  .history-header {
+    margin: 20px auto;
+    padding: 22px 18px;
+    border-radius: 22px;
+  }
+
+  .history-header__stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  .history-header__stat-card {
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-header__title {
+    font-size: 1.55rem;
+  }
+
+  .history-header__subtitle {
+    font-size: 0.82rem;
+  }
+
+  .history-header__icon-box {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+
+  .history-header__stat-value {
+    font-size: 1.4rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PURCHASES TABLE — transaction history list
+   ═══════════════════════════════════════════════════════════════ */
+
+.purchases {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto 64px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(231, 111, 81, 0.14);
+  box-shadow:
+    0 2px 0 rgba(255,255,255,0.85) inset,
+    0 12px 36px rgba(83, 42, 18, 0.07),
+    0 4px 10px rgba(83, 42, 18, 0.04);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px) saturate(1.6);
+  -webkit-backdrop-filter: blur(16px) saturate(1.6);
+}
+
+/* ── Column grid: same 4-col layout for head and every row ─── */
+.purchases__head,
+.purchases__row {
+  display: grid;
+  grid-template-columns: 90px 1fr 2fr 120px;
+  align-items: center;
+}
+
+/* ── Table head ─────────────────────────────────────────────── */
+.purchases__head {
+  padding: 0 12px;
+  background: linear-gradient(135deg,
+    rgba(255, 248, 240, 0.96) 0%,
+    rgba(255, 240, 228, 0.92) 100%);
+  border-bottom: 1px solid rgba(231, 111, 81, 0.15);
+}
+
+.purchases__col {
+  padding: 14px 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #7d6557;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.purchases__col--num   { color: #a88070; }
+.purchases__col--total { text-align: right; }
+
+/* ── Table body ─────────────────────────────────────────────── */
+.purchases__body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Individual row (P component) ───────────────────────────── */
+.purchases__row {
+  padding: 0 12px;
+  border-bottom: 1px solid rgba(231, 111, 81, 0.07);
+  background: transparent;
+  transition: background 200ms ease;
+  cursor: default;
+}
+
+.purchases__row:last-child {
+  border-bottom: none;
+}
+
+.purchases__row:hover {
+  background: rgba(231, 111, 81, 0.04);
+}
+
+.purchases__row:hover .purchases__cell--num {
+  color: #e76f51;
+}
+
+/* ── Cells ──────────────────────────────────────────────────── */
+.purchases__cell {
+  padding: 18px 16px;
+  font-size: 0.88rem;
+  color: #3b2316;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.purchases__cell--num {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #a88070;
+  letter-spacing: 0.03em;
+  transition: color 200ms ease;
+}
+
+.purchases__cell--date {
+  font-size: 0.8rem;
+  color: #6d5143;
+  font-variant-numeric: tabular-nums;
+}
+
+.purchases__cell--items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.purchases__cell--total {
+  text-align: right;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #2a9d8f;
+  letter-spacing: -0.01em;
+}
+
+/* ── Item pill tags ─────────────────────────────────────────── */
+.purchases__item-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  background: rgba(231, 111, 81, 0.08);
+  border: 1px solid rgba(231, 111, 81, 0.18);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #a04a2f;
+  white-space: nowrap;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.purchases__row:hover .purchases__item-tag {
+  background: rgba(231, 111, 81, 0.13);
+  border-color: rgba(231, 111, 81, 0.28);
+}
+
+/* ── Empty state ────────────────────────────────────────────── */
+.purchases__body:empty::after {
+  content: 'No orders yet — your purchase history will appear here.';
+  display: block;
+  padding: 48px 24px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #a48879;
+  font-style: italic;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .purchases {
+    border-radius: 18px;
+    margin-bottom: 40px;
+  }
+
+  .purchases__head,
+  .purchases__row {
+    grid-template-columns: 60px 1fr 1fr 90px;
+  }
+
+  .purchases__col,
+  .purchases__cell {
+    padding-inline: 10px;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .purchases__head {
+    display: none;
+  }
+
+  .purchases__row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 18px 16px;
+  }
+
+  .purchases__cell {
+    padding: 0;
+    width: 100%;
+  }
+
+  .purchases__cell--num::before   { content: 'Order: ';  font-weight: 700; color: #a88070; }
+  .purchases__cell--date::before  { content: 'Date: ';   font-weight: 700; color: #7d6557; }
+  .purchases__cell--total::before { content: 'Total: ';  font-weight: 700; color: #7d6557; }
+
+  .purchases__cell--total {
+    text-align: left;
+  }
+
+  .purchases__cell--items {
+    padding: 0;
+  }
+}
+
+
