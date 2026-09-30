@@ -83,7 +83,6 @@ const Juices=function(){
         // vals.setCurr(e)
     }
     const filtredJ=vals.curr!=='All'?vals.juices.filter(e=>e.category===vals.curr):vals.juices
-    console.log(filtredJ)
     return <div className="juices" ref={juicesRef}>
         {filtredJ.map((e,i)=>{
             return <div className="juice-card">

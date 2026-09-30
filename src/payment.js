@@ -18,6 +18,8 @@ export const Pay = function () {
 
 const Methods = function () {
     const vals = useContext(Context)
+    const carduniq=fun.uniqBy(vals.Payees,'cvv')
+    console.log(carduniq)
     return (
         <div className="payment-methods">
             <span className="payment-methods__eyebrow">Payment Setup</span>
@@ -33,7 +35,7 @@ const Methods = function () {
                     </div>
                     <span className="payment-method-card__badge">Selected</span>
                 </div>
-                {vals.Payees && vals.Payees.map((e, index) => <Cards key={index} e={e}></Cards>)}
+                {vals.Payees && carduniq.map((e, index) => <Cards key={index} e={e}></Cards>)}
             </div>
         </div>
     )
@@ -233,7 +235,7 @@ const Summary = function () {
         if(!vals.currCard) return
         const obj={
             num:vals.history.length+1,
-            odrDate:new Date().toDateString(),
+            odrDate:`${new Date().toDateString()} ${new Date().toLocaleTimeString()}`,
             item:item.map(e=>e.name),
             total:item.map((e,i)=>e.price*count[i]).reduce((acc,curr)=>acc+curr),
             count

@@ -17,6 +17,11 @@ export const Items=function(){
         vals.setCart([])
      }
      const jcs=fun.uniqBy(vals.cart,'id')
+     const remove=(e)=>{
+        const newArr=jcs.filter(el=>el.id!==e.id)
+        console.log(newArr)
+        vals.setCart(newArr)
+     }
 return <section className="order-items">
 <div className="order-items__header">
     <div>
@@ -43,6 +48,7 @@ return <section className="order-items">
 <div className="order-item__total">
     <span className="order-item__total-label">Item total</span>
     <span className="order-item__price">{calc(vals.cart,e)}Rs</span>
+    <button className="order-item__remove" onClick={()=>remove(e)}>remove</button>
 </div>
     </article>
 })}

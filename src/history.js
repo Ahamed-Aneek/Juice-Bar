@@ -54,7 +54,7 @@ const Header = function () {
                     <div className="history-header__stat-info">
                         <span className="history-header__stat-label">Total Spent</span>
                         <div className="history-header__stat-value-group">
-                            <span className="history-header__stat-currency">₹</span>
+                            <span className="history-header__stat-currency">Rs</span>
                             <span className="history-header__stat-value">{spent}</span>
                         </div>
                         <span className="history-header__stat-subtext">Lifetime investment</span>
@@ -86,6 +86,6 @@ const P = function ({ el }) {
         <span className="purchases__cell purchases__cell--items">
             {el.item.map((e, i) => <span key={i} className="purchases__item-tag">{e} {el.count[i]}</span>)}
         </span>
-        <span className="purchases__cell purchases__cell--total">₹{el.total}</span>
+        <span className="purchases__cell purchases__cell--total">{el.total}Rs</span>
     </div>
 }

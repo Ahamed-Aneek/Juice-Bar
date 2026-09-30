@@ -15,7 +15,6 @@ function App() {
     const getJuice=async function(){
       const res=await fetch('juice.json')
       const data=await res.json()
-      console.log(data)
       setJuices(data)
     }
     getJuice()
